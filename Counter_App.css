@@ -1,0 +1,244 @@
+/* Reseting the Default Values */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+div.counterAppBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Buttons of the Counter App */
+
+/* Decrement by 1 Button */
+button#decrementBy1 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #f2a944 0, #f34c4c 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(146, 97, 49, 0.4) 0 2px 4px 0 2px 4px,rgba(146, 97, 49, 0.4) 0 2px 4px 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  button#decrementBy1:focus {
+    box-shadow: #e0623c 0 0 0 1.5px inset, rgba(146, 97, 49, 0.4) 0 2px 4px 0 2px 4px, rgba(141, 115, 51, 0.2) 0 7px 13px -3px, #e0623c 0 -3px 0 inset;
+  }
+  
+  button#decrementBy1:hover {
+    box-shadow: rgba(146, 97, 49, 0.4) 0 2px 4px 0 4px 8px, rgba(141, 115, 51, 0.2) 0 7px 13px -3px, #e0623c 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  button#decrementBy1:active {
+    box-shadow: #e0623c 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+/* Increment by 1 Button */
+button#incrementBy1 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #86f154 0, #086124 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(51, 141, 119, 0.4) 0 2px 4px,rgba(51, 141, 119, 0.4) 0 7px 13px -3px,rgba(1, 78, 62, 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  button#incrementBy1:focus {
+    box-shadow: #046d0e 0 0 0 1.5px inset, rgba(51, 141, 119, 0.4) 0 2px 4px, rgba(51, 141, 119, 0.2) 0 7px 13px -3px, #046d0e 0 -3px 0 inset;
+  }
+  
+  button#incrementBy1:hover {
+    box-shadow: rgba(51, 141, 119, 0.4) 0 4px 8px, rgba(51, 141, 119, 0.2) 0 7px 13px -3px, #046d0e 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  button#incrementBy1:active {
+    box-shadow: #046d0e 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  /* Reset Button */
+
+  .resetButton {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .resetButtonShadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  .resetButtonEdge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%
+    );
+  }
+  
+  .resetButtonFrontText {
+    display: block;
+    position: relative;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  @media (min-width: 768px) {
+    .resetButtonFrontText {
+      font-size: 1.25rem;
+      padding: 12px 42px;
+    }
+  }
+  
+  .resetButton:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+  }
+  
+  .resetButton:hover .resetButtonFrontText {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .resetButton:active .resetButtonFrontText {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .resetButton:hover .resetButtonShadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .resetButton:active .resetButtonShadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .resetButton:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Display Value Screen */
+
+  #displayValue {
+    font-size: 25px;
+    padding: 7px 15px;
+    border: 1px solid black;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+
+
